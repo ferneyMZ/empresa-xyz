@@ -1,17 +1,31 @@
 import 'pasajero.dart';
 
 class Vuelo {
-  String numero;
-  DateTime fecha;
-  String ciudadOrigen;
-  String ciudadDestino;
-  List<Pasajero> pasajeros;
+  late int numeroVuelo;
+  late DateTime fecha;
+  late String ciudadOrigen;
+  late String ciudadDestino;
+  late List<Pasajero> listaPasajeros = [];
 
-  Vuelo(this.numero, this.fecha,this.ciudadOrigen, this.ciudadDestino, this.pasajeros);
-  String getDetalles(){
-    return'vuelo $numero de $ciudadOrigen a $ciudadDestino el $fecha';
-    }
-  
-  }
+  Vuelo({
+    required this.numeroVuelo,
+    required this.fecha,
+    required this.ciudadOrigen,
+    required this.ciudadDestino,
+  });
+
+  get pasajeros => null;
+}
+
+set numeroVuelo(int numeroVuelo) => numeroVuelo = numeroVuelo;
+set destino(String ciudadDestino) => ciudadDestino = ciudadDestino;
+set origen(String ciudadOrigen) => ciudadOrigen = ciudadOrigen;
+set fechaVuelo(DateTime fecha) => fecha = fecha;
+
+int get numeroVuelo => numeroVuelo;
+String get ciudadDestino => ciudadDestino;
+String get ciudadOrigen => ciudadOrigen;
+DateTime get fecha => fecha;
+List<Pasajero> get pasajeros => pasajeros;
 
 
